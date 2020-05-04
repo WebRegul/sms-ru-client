@@ -1,0 +1,35 @@
+{
+    "name": "kafkiansky/sms-ru-client",
+    "description": "sms.ru client",
+    "keywords": ["smsru"],
+    "homepage": "https://github.com/kafkiansky/sms-ru-client",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "kafkiansky",
+          "role": "Developer",
+          "email": "vadimzanfir@gmail.com",
+          "homepage": "https://github.com/kafkiansky"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+      "psr-4": {
+        "Kafkiansky\\SmsRu\\": "src"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Kafkiansky\\SmsRu\\Tests\\": "tests"
+      }
+    },
+    "config": {
+      "sort-packages": true
+  }
+}
