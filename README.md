@@ -12,6 +12,11 @@
 - [Usage](#usage)
     - [Configuration](#configuration)
     - [Available methods](#available-methods)
+        - [Send](#send)
+        - [Cost](#cost)
+        - [Balance](#balance)
+        - [Limit](#limit)
+        - [Senders](#senders)
 - [Testing](#testing)
 - [Licence](#licence)
 
