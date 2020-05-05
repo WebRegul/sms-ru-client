@@ -136,6 +136,10 @@ final class SmsRuApi
 
             $response = \json_decode((string) $response->getBody(), true);
 
+            if (!\is_array($response)) {
+                throw new SmsSendingFailedException($response, SmsRuResponse::errorTextFromCode($response));
+            }
+
             if ('ERROR' === $response['status']) {
                 throw new SmsSendingFailedException($response['status_code'], $response['status_text']);
             }
