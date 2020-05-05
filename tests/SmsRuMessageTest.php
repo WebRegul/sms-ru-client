@@ -32,9 +32,7 @@ final class SmsRuMessageTest extends TestCase
 
     public function testThatMessageInSingleModeConstructCorrect()
     {
-        $singleMessage = new SmsRuMessage(
-            new To('111111111', 'Test'),
-        );
+        $singleMessage = new SmsRuMessage(new To('111111111', 'Test'));
 
         $this->assertArrayHasKey('to', $singleMessage->toArray());
         $this->assertArrayHasKey('msg', $singleMessage->toArray());
