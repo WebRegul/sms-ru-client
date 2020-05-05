@@ -145,7 +145,7 @@ final class SmsRuResponse
      */
     public function getTotalLimit(): ?int
     {
-        return (int) $this->totalLimit;
+        return \is_null($this->totalLimit) ? $this->totalLimit : (int) $this->totalLimit;
     }
 
     /**
