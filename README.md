@@ -4,6 +4,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Quality Score](https://img.shields.io/scrutinizer/g/kafkiansky/sms-ru-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/kafkiansky/sms-ru-client)
 [![StyleCI](https://styleci.io/repos/261290955/shield)](https://styleci.io/repos/261290955)
+[![Total Downloads](https://img.shields.io/packagist/dt/kafkiansky/sms-ru-client.svg?style=flat-square)](https://packagist.org/packages/kafkiansky/sms-ru-client)
 
 ### Contents:
 
