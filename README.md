@@ -1,6 +1,5 @@
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-
 ![test](https://github.com/kafkiansky/sms-ru-client/workflows/test/badge.svg?event=push)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 ### Attention:
 Work in progress
