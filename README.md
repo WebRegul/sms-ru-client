@@ -7,7 +7,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/kafkiansky/sms-ru-client.svg?style=flat-square)](https://packagist.org/packages/kafkiansky/sms-ru-client)
 
 ### Contents:
-
 - [Installation](#installation)
 - [Usage](#usage)
     - [Configuration](#configuration)
