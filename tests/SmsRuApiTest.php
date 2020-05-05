@@ -45,7 +45,7 @@ final class SmsRuApiTest extends TestCase
 
     public function testSendMessageSuccess()
     {
-        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__ . '/fixtures/send_message.json')));
+        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__.'/fixtures/send_message.json')));
 
         $response = $this->smsRuApi->send(
             new SmsRuMessage(
@@ -61,7 +61,7 @@ final class SmsRuApiTest extends TestCase
 
     public function testCostSuccess()
     {
-        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__ . '/fixtures/cost.json')));
+        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__.'/fixtures/cost.json')));
 
         $response = $this->smsRuApi->cost(
             new SmsRuMessage(
@@ -78,7 +78,7 @@ final class SmsRuApiTest extends TestCase
 
     public function testBalanceSuccess()
     {
-        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__ . '/fixtures/balance.json')));
+        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__.'/fixtures/balance.json')));
 
         $response = $this->smsRuApi->balance();
 
@@ -89,7 +89,7 @@ final class SmsRuApiTest extends TestCase
 
     public function testLimitSuccess()
     {
-        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__ . '/fixtures/limit.json')));
+        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__.'/fixtures/limit.json')));
 
         $response = $this->smsRuApi->limit();
 
@@ -101,7 +101,7 @@ final class SmsRuApiTest extends TestCase
 
     public function testSendersSuccess()
     {
-        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__ . '/fixtures/senders.json')));
+        $this->mockHandler->append(new Response(200, [], file_get_contents(__DIR__.'/fixtures/senders.json')));
 
         $response = $this->smsRuApi->senders();
 

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Kafkiansky\SmsRu;
 
 use GuzzleHttp\Client as HttpClient;
-use Kafkiansky\SmsRu\Message\SmsRuMessage;
+use GuzzleHttp\Exception\GuzzleException;
 use Kafkiansky\SmsRu\Exceptions\HttpClientErrorException;
 use Kafkiansky\SmsRu\Exceptions\SmsSendingFailedException;
-use GuzzleHttp\Exception\GuzzleException;
+use Kafkiansky\SmsRu\Message\SmsRuMessage;
 
 final class SmsRuApi
 {
@@ -33,10 +33,10 @@ final class SmsRuApi
     /**
      * @param SmsRuMessage $message
      *
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     public function send(SmsRuMessage $message): SmsRuResponse
     {
@@ -46,10 +46,10 @@ final class SmsRuApi
     /**
      * @param SmsRuMessage $message
      *
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     public function cost(SmsRuMessage $message): SmsRuResponse
     {
@@ -57,10 +57,10 @@ final class SmsRuApi
     }
 
     /**
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     public function balance(): SmsRuResponse
     {
@@ -68,10 +68,10 @@ final class SmsRuApi
     }
 
     /**
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     public function limit(): SmsRuResponse
     {
@@ -79,10 +79,10 @@ final class SmsRuApi
     }
 
     /**
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     public function senders(): SmsRuResponse
     {
@@ -91,12 +91,12 @@ final class SmsRuApi
 
     /**
      * @param SmsRuMessage $message
-     * @param string $url
-     *
-     * @return SmsRuResponse
+     * @param string       $url
      *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     private function requestWithMessage(SmsRuMessage $message, string $url): SmsRuResponse
     {
@@ -108,10 +108,10 @@ final class SmsRuApi
     /**
      * @param string $url
      *
-     * @return SmsRuResponse
-     *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     private function emptyRequest(string $url): SmsRuResponse
     {
@@ -119,13 +119,13 @@ final class SmsRuApi
     }
 
     /**
-     * @param array $payload
+     * @param array  $payload
      * @param string $endpoint
-     *
-     * @return SmsRuResponse
      *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
+     *
+     * @return SmsRuResponse
      */
     private function request(array $payload, string $endpoint): SmsRuResponse
     {

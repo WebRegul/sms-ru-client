@@ -50,7 +50,7 @@ final class To extends Recipient
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function useIconv(): bool
     {

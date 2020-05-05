@@ -50,7 +50,7 @@ final class Multi extends Recipient
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function useIconv(): bool
     {
@@ -58,7 +58,7 @@ final class Multi extends Recipient
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function asMulti(): bool
     {
