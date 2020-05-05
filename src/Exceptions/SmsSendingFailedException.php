@@ -14,13 +14,13 @@ final class SmsSendingFailedException extends \Exception
     private $statusCode;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $statusText;
 
-    public function __construct(int $statusCode, string $statusText, $code = 0, Throwable $previous = null)
+    public function __construct(int $statusCode, string $statusText = null, $code = 0, Throwable $previous = null)
     {
-        $message = \sprintf('sms.ru responded with an error, status text: %s', $statusText);
+        $message = \sprintf('sms.ru responded with an error, status text: %s', $statusText ?? '');
         $this->statusCode = $statusCode;
         $this->statusText = $statusText;
 
@@ -36,9 +36,9 @@ final class SmsSendingFailedException extends \Exception
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getStatusText(): string
+    public function getStatusText(): ?string
     {
         return $this->statusText;
     }
