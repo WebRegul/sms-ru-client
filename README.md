@@ -61,6 +61,7 @@ $api = new \Kafkiansky\SmsRu\SmsRuApi(
 
 ### Available methods
 
+#### Send
 1. One client - one message
 ```php
 require __DIR__ . '/vendor/autoload.php';
@@ -81,8 +82,6 @@ $response = $api->send(
         new \Kafkiansky\SmsRu\Message\To('7909000000', 'Hello')
     )
 );
-
-var_dump($response);
 ```
 
 2. Many clients - one message
@@ -92,8 +91,6 @@ $response = $api->send(
         new \Kafkiansky\SmsRu\Message\To(['7909000000', '7909111111'], 'Hello')
     )
 );
-
-var_dump($response);
 ```
 
 3. Many clients - many messages
@@ -106,8 +103,6 @@ $response = $api->send(
         ])
     )
 );
-
-var_dump($response);
 ```
 
 The SmsRuMessage has many other parameters: you can specify user ip, ttl, time, daytime and translit.
@@ -156,6 +151,46 @@ And as third argument in `To`:
 
 ```php
 new \Kafkiansky\SmsRu\Message\To('7909000000', 'Hello', true);
+```
+
+#### Cost
+
+You can get cost for batch of messages:
+
+```php
+$response = $api->cost(
+    new \Kafkiansky\SmsRu\Message\SmsRuMessage(
+        new \Kafkiansky\SmsRu\Message\Multi([
+            new \Kafkiansky\SmsRu\Message\To('7909000000', 'Hello'),
+            new \Kafkiansky\SmsRu\Message\To('7909111111', 'Bonjour'),
+        ])
+    )
+);
+
+echo $response->getTotalCost();
+```
+
+#### Balance
+
+```php
+$response = $api->balance();
+
+echo $response->getBalance();
+```
+
+#### Limit
+```php
+$response = $api->limit();
+
+echo $response->getTotalLimit();
+echo $response->getUsedToday();
+```
+
+#### Senders
+```php
+$response = $api->senders();
+
+echo $response->getSenders();
 ```
 
 ## Testing
