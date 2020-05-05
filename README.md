@@ -1,6 +1,6 @@
 ![test](https://github.com/kafkiansky/sms-ru-client/workflows/test/badge.svg?event=push)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-
+[![Quality Score](https://img.shields.io/scrutinizer/g/kafkiansky/sms-ru-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/kafkiansky/sms-ru-client)
 ### Attention:
 Work in progress
 
