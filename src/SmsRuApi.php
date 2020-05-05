@@ -12,7 +12,7 @@ use GuzzleHttp\Exception\GuzzleException;
 
 final class SmsRuApi
 {
-    private const HOST = 'https://sms.ru/sms/send';
+    private const HOST = 'https://sms.ru';
 
     /**
      * @var SmsRuConfig
@@ -33,17 +33,104 @@ final class SmsRuApi
     /**
      * @param SmsRuMessage $message
      *
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return SmsRuResponse
      *
      * @throws HttpClientErrorException
      * @throws SmsSendingFailedException
      */
-    public function send(SmsRuMessage $message)
+    public function send(SmsRuMessage $message): SmsRuResponse
+    {
+        return $this->requestWithMessage($message, 'sms/send');
+    }
+
+    /**
+     * @param SmsRuMessage $message
+     *
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    public function cost(SmsRuMessage $message): SmsRuResponse
+    {
+        return $this->requestWithMessage($message, 'sms/cost');
+    }
+
+    /**
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    public function balance(): SmsRuResponse
+    {
+        return $this->emptyRequest('my/balance');
+    }
+
+    /**
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    public function limit(): SmsRuResponse
+    {
+        return $this->emptyRequest('my/limit');
+    }
+
+    /**
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    public function senders(): SmsRuResponse
+    {
+        return $this->emptyRequest('my/senders');
+    }
+
+    /**
+     * @param SmsRuMessage $message
+     * @param string $url
+     *
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    private function requestWithMessage(SmsRuMessage $message, string $url): SmsRuResponse
     {
         $payload = \array_merge($this->config->toArray(), $message->toArray());
 
+        return $this->request($payload, $url);
+    }
+
+    /**
+     * @param string $url
+     *
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    private function emptyRequest(string $url): SmsRuResponse
+    {
+        return $this->request($this->config->toArray(), $url);
+    }
+
+    /**
+     * @param array $payload
+     * @param string $endpoint
+     *
+     * @return SmsRuResponse
+     *
+     * @throws HttpClientErrorException
+     * @throws SmsSendingFailedException
+     */
+    private function request(array $payload, string $endpoint): SmsRuResponse
+    {
         try {
-            $response = $this->client->request('POST', self::HOST, [
+            $response = $this->client->request('POST', $this->endpoint($endpoint), [
                 'form_params' => $payload,
             ]);
 
@@ -53,9 +140,19 @@ final class SmsRuApi
                 throw new SmsSendingFailedException($response['status_code'], $response['status_text']);
             }
 
-            return $response;
+            return new SmsRuResponse($response);
         } catch (GuzzleException $e) {
             throw new HttpClientErrorException($e->getMessage());
         }
+    }
+
+    /**
+     * @param string $path
+     *
+     * @return string
+     */
+    private function endpoint(string $path): string
+    {
+        return \sprintf('%s/%s', self::HOST, $path);
     }
 }

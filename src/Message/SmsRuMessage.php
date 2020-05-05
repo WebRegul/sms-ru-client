@@ -42,6 +42,16 @@ final class SmsRuMessage
     }
 
     /**
+     * @param Recipient $recipient
+     *
+     * @return SmsRuMessage
+     */
+    public static function fromRecipient(Recipient $recipient): self
+    {
+        return new self($recipient);
+    }
+
+    /**
      * @return Recipient
      */
     public function getRecipient(): Recipient
