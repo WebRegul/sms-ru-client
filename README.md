@@ -8,7 +8,6 @@
 ### Contents:
 
 - [Installation](#installation)
-    - [Setting up the SmscRu service](#setting-up-the-SmscRu-service)
 - [Usage](#usage)
     - [Configuration](#configuration)
     - [Available methods](#available-methods)
