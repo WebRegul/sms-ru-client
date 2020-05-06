@@ -17,7 +17,7 @@
         - [Limit](#limit)
         - [Senders](#senders)
 - [Testing](#testing)
-- [Licence](#licence)
+- [License](#license)
 
 
 ## Installation
