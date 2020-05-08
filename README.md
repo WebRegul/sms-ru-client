@@ -5,6 +5,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/kafkiansky/sms-ru-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/kafkiansky/sms-ru-client)
 [![StyleCI](https://styleci.io/repos/261290955/shield)](https://styleci.io/repos/261290955)
 [![Total Downloads](https://img.shields.io/packagist/dt/kafkiansky/sms-ru-client.svg?style=flat-square)](https://packagist.org/packages/kafkiansky/sms-ru-client)
+[![Codecov](https://codecov.io/gh/kafkiansky/sms-ru-client/branch/master/graph/badge.svg)](https://codecov.io/gh/kafkiansky/sms-ru-client)
 
 ### Contents:
 - [Installation](#installation)
