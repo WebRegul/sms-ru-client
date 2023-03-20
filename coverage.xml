@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679287938">
-  <project timestamp="1679287938">
+<coverage generated="1679288041">
+  <project timestamp="1679288041">
     <package name="WebRegul\SmsRu\Exceptions">
       <file name="/var/www/packeges/sms-ru-client/src/Exceptions/HttpClientErrorException.php">
         <class name="WebRegul\SmsRu\Exceptions\HttpClientErrorException" namespace="WebRegul\SmsRu\Exceptions">
