@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu\Exceptions;
+namespace WebRegul\SmsRu\Exceptions;
 
 final class HttpClientErrorException extends \Exception
 {

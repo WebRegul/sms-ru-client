@@ -26,7 +26,7 @@
 Install this package with Composer:
 
 ```bash
-composer require kafkiansky/sms-ru-client
+composer require webregul/sms-ru-client
 ```
 
 ## Usage

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu\Message;
+namespace WebRegul\SmsRu\Message;
 
 abstract class Recipient
 {

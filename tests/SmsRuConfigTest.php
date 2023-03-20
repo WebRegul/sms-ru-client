@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu\Tests;
+namespace WebRegul\SmsRu\Tests;
 
-use Kafkiansky\SmsRu\SmsRuConfig;
+use WebRegul\SmsRu\SmsRuConfig;
 use PHPUnit\Framework\TestCase;
 
 final class SmsRuConfigTest extends TestCase

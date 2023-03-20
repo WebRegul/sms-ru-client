@@ -1,15 +1,15 @@
 {
-    "name": "kafkiansky/sms-ru-client",
+    "name": "webregul/sms-ru-client",
     "description": "sms.ru client",
     "keywords": ["smsru"],
-    "homepage": "https://github.com/kafkiansky/sms-ru-client",
+    "homepage": "https://github.com/webregul/sms-ru-client",
     "license": "MIT",
     "authors": [
         {
-          "name": "kafkiansky",
+          "name": "webregul",
           "role": "Developer",
-          "email": "vadimzanfir@gmail.com",
-          "homepage": "https://github.com/kafkiansky"
+          "email": "info@webregul.ru",
+          "homepage": "https://github.com/webregul"
         }
     ],
     "require": {
@@ -22,12 +22,12 @@
     },
     "autoload": {
       "psr-4": {
-        "Kafkiansky\\SmsRu\\": "src"
+        "WebRegul\\SmsRu\\": "src"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "Kafkiansky\\SmsRu\\Tests\\": "tests"
+        "WebRegul\\SmsRu\\Tests\\": "tests"
       }
     },
     "config": {

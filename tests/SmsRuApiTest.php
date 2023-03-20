@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu\Tests;
+namespace WebRegul\SmsRu\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use Kafkiansky\SmsRu\Message\SmsRuMessage;
-use Kafkiansky\SmsRu\Message\To;
-use Kafkiansky\SmsRu\SmsRuApi;
-use Kafkiansky\SmsRu\SmsRuConfig;
+use WebRegul\SmsRu\Message\SmsRuMessage;
+use WebRegul\SmsRu\Message\To;
+use WebRegul\SmsRu\SmsRuApi;
+use WebRegul\SmsRu\SmsRuConfig;
 use PHPUnit\Framework\TestCase;
 
 final class SmsRuApiTest extends TestCase

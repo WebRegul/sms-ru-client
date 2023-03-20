@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu;
+namespace WebRegul\SmsRu;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\GuzzleException;
-use Kafkiansky\SmsRu\Exceptions\HttpClientErrorException;
-use Kafkiansky\SmsRu\Exceptions\SmsSendingFailedException;
-use Kafkiansky\SmsRu\Message\SmsRuMessage;
+use WebRegul\SmsRu\Exceptions\HttpClientErrorException;
+use WebRegul\SmsRu\Exceptions\SmsSendingFailedException;
+use WebRegul\SmsRu\Message\SmsRuMessage;
 
 final class SmsRuApi
 {

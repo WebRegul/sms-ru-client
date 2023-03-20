@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kafkiansky\SmsRu\Tests;
+namespace WebRegul\SmsRu\Tests;
 
-use Kafkiansky\SmsRu\Message\Multi;
-use Kafkiansky\SmsRu\Message\Recipient;
-use Kafkiansky\SmsRu\Message\SmsRuMessage;
-use Kafkiansky\SmsRu\Message\To;
+use WebRegul\SmsRu\Message\Multi;
+use WebRegul\SmsRu\Message\Recipient;
+use WebRegul\SmsRu\Message\SmsRuMessage;
+use WebRegul\SmsRu\Message\To;
 use PHPUnit\Framework\TestCase;
 
 final class SmsRuMessageTest extends TestCase
